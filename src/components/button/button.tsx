@@ -28,7 +28,7 @@ const StyledButton = configedStyled("button", {
       },
       base: {
         padding: "6px 12px",
-        fontSize: "14px"
+        fontSize: "16px"
       },
       sm: {
         padding: "4px 8px",
@@ -72,7 +72,7 @@ const StyledButton = configedStyled("button", {
   },
   defaultVariants: {
     colorScheme: "primary",
-    size: "sm",
+    size: "base",
     rounded: "base",
     outlined: "false",
     disabled: "false"
