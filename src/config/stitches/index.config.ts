@@ -68,6 +68,16 @@ const { styled: configedStyled } = createStitches({
         danger11: '$red11',
         danger12: '$red12',
     },
+    fontWeights: {
+      medium: "500",
+      semiBold: "600",
+      bold: "700"
+    },
+    fontSizes: {
+      sm: "14px",
+      base: "16px",
+      lg: "20px",
+    },
     radii: {
         none: "0px",
         sm: "2px",
