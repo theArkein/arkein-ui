@@ -1,5 +1,5 @@
 import {
-    violet,
+    blue,
     mauve,
     green,
     red,
@@ -11,23 +11,23 @@ import { getColorSceheme } from './utils';
 const { styled: configedStyled } = createStitches({
   theme: {
     colors: {
-        ...violet,
+        ...blue,
         ...mauve,
         ...green,
         ...red,
 
-        primary1: '$violet1',
-        primary2: '$violet2',
-        primary3: '$violet3',
-        primary4: '$violet4',
-        primary5: '$violet5',
-        primary6: '$violet6',
-        primary7: '$violet7',
-        primary8: '$violet8',
-        primary9: '$violet9',
-        primary10: '$violet10',
-        primary11: '$violet11',
-        primary12: '$violet12',
+        primary1: '$blue1',
+        primary2: '$blue2',
+        primary3: '$blue3',
+        primary4: '$blue4',
+        primary5: '$blue5',
+        primary6: '$blue6',
+        primary7: '$blue7',
+        primary8: '$blue8',
+        primary9: '$blue9',
+        primary10: '$blue10',
+        primary11: '$blue11',
+        primary12: '$blue12',
 
         secondary1: '$mauve1',
         secondary2: '$mauve2',
