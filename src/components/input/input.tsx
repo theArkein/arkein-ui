@@ -3,8 +3,9 @@ import { ColorSchemeOptions, RoundedOptions, SizeOptions } from '../../config/st
 import { configedStyled } from '../../config/stitches/index.config';
 import Label from '../label/label';
 import { Text } from '../text';
+import { CSS } from '@stitches/react';
 
-export interface InputProps {
+export interface InputProps extends Omit<React.ComponentPropsWithoutRef<"input">,"size"> {
    /**
   * Label text for the input component
   */
@@ -40,7 +41,6 @@ export interface InputProps {
 }
 
 const StyledInput = configedStyled("input", {
-  width: "stretch",
   outline: "none",
   border: "none",
   variants:{
@@ -50,7 +50,7 @@ const StyledInput = configedStyled("input", {
         fontSize: "20px"
       },
       base: {
-        padding: "8px 16px",
+        padding: "6px 12px",
         fontSize: "16px"
       },
       sm: {
@@ -105,7 +105,8 @@ const StyledInput = configedStyled("input", {
 const Container = configedStyled("div", {
   display: "flex",
   flexDirection: "column",
-  gap: "6px"
+  gap: "6px",
+  width: "100%"
 })
 
 

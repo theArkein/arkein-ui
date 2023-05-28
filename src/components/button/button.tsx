@@ -5,7 +5,8 @@ import { configedStyled } from '../../config/stitches/index.config';
 import { ColorSchemeOptions, RoundedOptions, SizeOptions } from '../../config/stitches/variants-options.types';
 
 const StyledButton = configedStyled("button", {
-  margin: "4px 2px",
+  cursor: "pointer",
+  height: "max-content",
   variants:{
     colorScheme: {
       primary: {
@@ -79,7 +80,7 @@ const StyledButton = configedStyled("button", {
   }
 })
 
-export interface ButtonProps {
+export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
    /**
    * Visible text for the button component
    */
@@ -97,10 +98,6 @@ export interface ButtonProps {
    */
   rounded?: RoundedOptions
    /**
-   * Click handler for the button component
-   */
-  onClick?: () => void
-   /**
    * Should the button be outlined or filled
    */
    outlined?: boolean
@@ -110,8 +107,8 @@ export interface ButtonProps {
   disabled?: boolean
 }
 
-export const Button = ({ label, onClick, disabled=false, rounded="base", outlined=false, colorScheme="primary", size="base", ...props }: ButtonProps) => {
+export const Button = ({ label, disabled=false, rounded="base", outlined=false, colorScheme="primary", size="base", ...props }: ButtonProps) => {
 	return (
-		<StyledButton size={size} outlined={outlined} rounded={rounded} colorScheme={colorScheme} onClick={onClick} disabled={disabled} {...props}>{label}</StyledButton>
+	  <StyledButton size={size} outlined={outlined} rounded={rounded} colorScheme={colorScheme} disabled={disabled} {...props}>{label}</StyledButton>
 	);
 };
