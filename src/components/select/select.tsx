@@ -70,12 +70,12 @@ export interface SelectProps extends Omit<React.ComponentPropsWithoutRef<"select
 
 export const Select = ({ label, onClick, disabled=false, rounded, size, options, ...props }: SelectProps) => {
 	const optionsList = options.map(option=>(
-        <option key={option.value} value={option.value}>{option.label}</option>
+        <option role="listitem" key={option.value} value={option.value}>{option.label}</option>
     ))
     return (
-		<StyledSelect size={size} rounded={rounded} {...props}>
-            <option disabled>{label}</option>
-            {optionsList}
-        </StyledSelect>
+		<StyledSelect size={size} rounded={rounded} {...props} role="listbox">
+      <option disabled role="listitem">{label}</option>
+      {optionsList}
+    </StyledSelect>
 	);
 };
