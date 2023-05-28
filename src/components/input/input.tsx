@@ -5,7 +5,7 @@ import Label from '../label/label';
 import { Text } from '../text';
 import { CSS } from '@stitches/react';
 
-export interface InputProps extends Omit<React.ComponentPropsWithoutRef<"input">,"size"> {
+export interface InputProps extends Omit<React.ComponentPropsWithRef<"input">,"size"> {
    /**
   * Label text for the input component
   */
